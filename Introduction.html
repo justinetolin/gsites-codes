@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body data-scroll-container>
     <div class="main-container part" data-background="#fafaf9">
         <header class="img-container">
             <img
@@ -30,7 +30,7 @@
         <img class="arrowdown" src="https://drive.google.com/uc?export=view&id=1MlBg5HY_CGFvneUbskjaqa7WIU9Qeldj">
     </div>
 
-    <div class="introduction part" data-background="#fafaf9">
+    <div class="introduction part" data-background="#fafaf9" data-scroll-section>
         <div>
             <img src="IMG_7868.JPG">
         </div>
@@ -52,15 +52,15 @@
                 Thanks for visiting my site.</p>
         </div>
     </div>
-    <div class="quote part" data-background="#000000">
+    <div class="quote part" data-background="#000000" data-scroll-section>
         <div class="text">
-            <h1 class="heading-anim">“Try not to become a man of success. Rather become a man of value.”</h1>
-            <h1 hidden2>— Albert Einstein</h1>
+            <h1 class="heading-anim" data-scroll>“Try not to become a man of success. Rather become a man of value.”</h1>
+            <h1 class="hidden2" data-scroll>— Albert Einstein</h1>
         </div>
         <div><img src="einstein.jpg" class="hidden2"></div>
     </div>
 
-    <div class="favorites part" data-background="#aeae9d">
+    <div class="favorites part" data-background="#aeae9d" data-scroll-section>
         <h1 class="heading-anim">My Likes</h1>
         <div class="cards pizza">
             <img src="pizza.jpg">
@@ -112,7 +112,8 @@
         <div class="foot-two">
             <div>
                 <p>|&nbsp; &nbsp; &nbsp;Site designed and coded with 💙&nbsp; &nbsp; &nbsp;|</p>
-                <p>|&nbsp; &nbsp; &nbsp;Designed with Google Sites&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Codes written with HTML, CSS, & JavaScript.&nbsp; &nbsp; &nbsp;|</p>
+                <p>|&nbsp; &nbsp; &nbsp;Designed with Google Sites&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Codes written
+                    with HTML, CSS, & JavaScript.&nbsp; &nbsp; &nbsp;|</p>
             </div>
         </div>
     </footer>
@@ -123,6 +124,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollie/1.4.0/jquery.scrollie.min.js"></script>
     <script src="intro-script.js"></script>
+    <!-- <script src="locomotive.js"></script> -->
 </body>
 
 </html>
