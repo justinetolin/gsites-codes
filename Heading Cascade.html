@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "DM Sans", Arial;
+            margin: 0;
+            text-align: center;
+        }
+
+        [data-animate] {
+            opacity: 0;
+            will-change: auto;
+        }
+
+        .animated {
+            transition: all 1s cubic-bezier(0.57, 0.08, 0.9, 0.36);
+            opacity: 1;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        } 
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fafaf9;
+            font-family: "Space Grotesk";
+            scroll-behavior: smooth;
+            transition: all 1s;
+        }
+/* ! FOOTER STYLES */
+
+
+footer {
+    margin: 0;
+    padding: 2rem 3rem;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 1rem;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+.foot-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+}
+
+.foot-one img {
+    width: 36px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <h1 data-animate>Playlist</h1>
+    <footer>
+        <div class="foot-one">
+            <div>
+                <p>This website is created for educational purposes only.</p>
+                <p>No copyright infringements are intended. All rights reserved. 2023</p>
+            </div>
+            <div>
+                <p>Follow Me on:</p>
+                <div>
+                    <a href="http://facebook.com" target="_blank"><img
+                            src="https://ssl.gstatic.com/atari/images/sociallinks/facebook_colored_36dp.png"
+                            alt="Facebook"></a>
+                    <a href="http://instagram.com" target="_blank"><img
+                            src="https://ssl.gstatic.com/atari/images/sociallinks/instagram_colored_36dp.png"
+                            alt="Instagram"></a>
+                    <a href="http://youtube.com" target="_blank"><img
+                            src="https://ssl.gstatic.com/atari/images/sociallinks/youtube_colored_36dp.png"
+                            alt="YouTube"></a>
+                    <a href="http://tiktok.com" target="_blank"><img
+                            src="https://ssl.gstatic.com/atari/images/sociallinks/tiktok_colored_dark_36dp.png"
+                            alt="TikTok"></a>
+                    <a href="http://twitter.com" target="_blank"><img
+                            src="https://ssl.gstatic.com/atari/images/sociallinks/twitter_colored_36dp.png"
+                            alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="foot-two">
+            <div>
+                <p>|&nbsp; &nbsp; &nbsp;Site designed and coded with 💙&nbsp; &nbsp; &nbsp;|</p>
+                <p>|&nbsp; &nbsp; &nbsp;Designed with Google Sites&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;Codes written with HTML, CSS, & JavaScript.&nbsp; &nbsp; &nbsp;|</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Sequence Animation
+        function triggerAnimationSequence(className) {
+            const elements = document.querySelectorAll(`${className}`);
+
+            elements.forEach((element) => {
+                const lettersArray = element.innerHTML.trim().split("");
+                let delay = 0;
+
+                element.innerHTML = "";
+                lettersArray.forEach((letter) => {
+                    let span = document.createElement("SPAN");
+                    let attr = document.createAttribute("data-animate");
+
+                    span.setAttributeNode(attr);
+                    span.innerHTML = letter;
+                    span.style.transitionDelay = `${delay}ms`;
+                    element.appendChild(span);
+
+                    void span.offsetWidth;
+                    span.classList.add("animated");
+                    delay += 70;
+                });
+
+                element.removeAttribute("data-animate");
+            });
+        }
+
+        setTimeout(() => {
+            triggerAnimationSequence("h1");
+        }, 500);
+    </script>
+</body>
+
+</html>

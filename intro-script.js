@@ -118,8 +118,7 @@ function triggerAnimationSequence(element) {
     });
 
     element.removeAttribute("data-animate");
-}
-1;
+};
 // ! Intersection Observer for triggerAnimationSequence
 const headingAnimElements = document.querySelectorAll(".heading-anim");
 const animObserver = new IntersectionObserver(entries => {
