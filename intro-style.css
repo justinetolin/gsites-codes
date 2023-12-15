@@ -242,6 +242,17 @@ h6 {
     animation: arrowDown 1s 5s forwards, downEmphasis 1s ease-in-out 5s infinite;
 }
 
+.arrowmsg {
+    position: absolute;
+    color: white;
+    bottom: 40px;
+    left: 48%;
+    width: max-content;
+    opacity: 0;
+    animation: arrowDown 1s 5s forwards, downEmphasis 1s ease-in-out 5s infinite;
+    font-size: 0.7rem;
+}
+
 /* ! END OF OPENING */
 
 
@@ -358,4 +369,40 @@ footer p {
 
 .foot-one img {
     width: 36px;
+}
+
+/* Styling for the legacysite section */
+.legacysite {
+    padding: 5rem;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.legacysite h1 {
+    font-size: 3em;
+}
+
+/* Styles for the legacy content */
+.legacy-content {
+    max-width: 800px;
+}
+
+/* Styling for the preview button */
+.preview-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 2rem;
+    background-color: #a0689f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover animation for the button */
+.preview-button:hover {
+    transform: scale(0.95);
 }
