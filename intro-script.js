@@ -151,7 +151,7 @@ function DetectFootTwo() {
             setTimeout(() => {
                 element.classList.add('show');
             }, delay);
-            delay += 2000;
+            delay += 1000;
         });
 
         setTimeout(() => {
