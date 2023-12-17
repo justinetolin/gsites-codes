@@ -47,6 +47,7 @@ const observer2 = new IntersectionObserver(
         entries.forEach(entry => {
             entry.target.classList.toggle("show", entry.isIntersecting);
             if (entry.isIntersecting) observer2.unobserve(entry.target);
+            DetectFootTwo();
         });
     },
     {
@@ -134,4 +135,33 @@ headingAnimElements.forEach(element => {
     animObserver.observe(element);
 });
 
+
+
+
+// ! Detect foot-two's classlist
+function DetectFootTwo() {
+    const footElement = document.getElementById('foot2');
+    const passionElements = document.querySelectorAll('.loveit');
+    const floaterElement = document.getElementById('floater');
+
+    if (footElement.classList.contains('show')) {
+        let delay = 500;
+
+        passionElements.forEach(element => {
+            setTimeout(() => {
+                element.classList.add('show');
+            }, delay);
+            delay += 2000;
+        });
+
+        setTimeout(() => {
+            floaterElement.style.color = 'red';
+            floaterElement.textContent = "Please, basahin mo toh kahit mahaba";
+            // floaterElement.classList.add('hidden');
+        }, delay);
+
+    } else {
+        console.log("No Show Class on Foot2 Element.");
+    }
+}
 
